@@ -1,7 +1,7 @@
 import Framework7, {Dom7, Template7} from 'framework7/dist/framework7.esm.bundle.js';
-import routes from './routes';
-import 'framework7/dist/css/framework7.css';
-import './assets/css/App.css';
+import Routes from './routes';
+import Framework7Styles from 'framework7/dist/css/framework7.css';
+import AppStyles from './assets/css/App.css';
 
 // Dom7
 const $ = Dom7;
@@ -30,7 +30,7 @@ const app = new Framework7({
       app.dialog.alert('Hello World!');
     },
   },
-  routes,
+  routes: Routes,
   vi: {
     placementId: 'pltd4o7ibb9rc653x14',
   },
