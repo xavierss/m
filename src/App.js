@@ -1,9 +1,16 @@
-import Framework7, {Dom7, Template7} from 'framework7/dist/framework7.esm.bundle.js';
-import Routes from './routes';
+// OpenLayers Styles
+import 'ol/ol.css';
 
 // Framework7 Styles
-import Framework7Styles from 'framework7/dist/css/framework7.css';
-import AppStyles from './assets/css/App.css';
+import 'framework7/dist/css/framework7.css';
+import './assets/css/App.css';
+
+// OpenLayers Script
+import Map from 'ol/map';
+
+// Framework7 Script
+import routes from './routes';
+import Framework7, {Dom7, Template7} from 'framework7/dist/framework7.esm.bundle.js';
 
 // Dom7
 const $ = Dom7;
@@ -23,21 +30,21 @@ export default class {
             theme,
             data: function () {
                 return {
-                user: {
-                    firstName: 'John',
-                    lastName: 'Doe',
-                },
+                    user: {
+                        firstName: 'John',
+                        lastName: 'Doe',
+                    },
                 };
             },
             methods: {
                 helloWorld: function () {
-                app.dialog.alert('Hello World!');
+                    app.dialog.alert('Hello World!');
                 },
             },
-            routes: Routes,
+            routes,
             vi: {
                 placementId: 'pltd4o7ibb9rc653x14',
-            }
+            },
         });
     }
 }
