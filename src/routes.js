@@ -11,6 +11,11 @@ export default [
     url: './static/pages/about.html',
     name: 'about',
   },
+  {
+    path: '/origin/',
+    url: './static/pages/origin.html',
+    name: 'origin'
+  },
   // Right Panel pages
   {
     path: '/panel-right-1/',
