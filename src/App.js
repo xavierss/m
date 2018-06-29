@@ -1,5 +1,6 @@
 // import 'font-awesome-icons'
 import 'font-awesome/css/font-awesome.css'
+
 // OpenLayers Styles
 import 'ol/ol.css';
 
@@ -21,13 +22,13 @@ const $ = Dom7;
 export default class {
   constructor(id) {
     // Theme
-    let theme = 'md';
+    let theme = 'ios';
     if (document.location.search.indexOf('theme=') >= 0) {
       theme = document.location.search.split('theme=')[1].split('&')[0];
     }
     
     // Init App
-    const app = new Framework7({
+    this.app = new Framework7({
       id: 'myapp',
       root: id,
       theme,
@@ -40,7 +41,7 @@ export default class {
         };
       },
       methods: {
-        helloWorld: function () {
+        helloWorld: () => {
           app.dialog.alert('Hello World!');
         },
       },
@@ -48,6 +49,15 @@ export default class {
       vi: {
         placementId: 'pltd4o7ibb9rc653x14',
       },
+      on: {
+        routerAjaxStart: (xhr, options) => {
+          app.app.preloader.show();
+        },
+
+        routerAjaxComplete: (xhr, options) => {
+          app.app.preloader.hide();
+        }
+      }
     });
   }
 }
