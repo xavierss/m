@@ -6,8 +6,8 @@ import 'ol/ol.css';
 
 // Framework7 Styles
 import 'framework7/dist/css/framework7.css';
-import './assets/css/App.css';
-import './assets/css/Framework7-Custom.css';
+import './assets/css/app.css';
+import './assets/css/styles.css';
 
 // OpenLayers Script
 import Map from 'ol/map';
