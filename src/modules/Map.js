@@ -11,10 +11,10 @@ export default class {
           source: new OSM()
         })
       ],
-      target: 'map',
+      target: id,
       view: new View({
-        center: [0, 0],
-        zoom: 2
+        center: [14240853.357171986, 4544242.892015014],
+        zoom: 6
       })
     });
 
