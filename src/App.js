@@ -9,12 +9,12 @@ import 'framework7/dist/css/framework7.css';
 import './assets/css/app.css';
 import './assets/css/styles.css';
 
-// OpenLayers Script
-import Map from 'ol/map';
-
 // Framework7 Script
 import routes from './routes';
-import Framework7, {Dom7, Template7} from 'framework7/dist/framework7.esm.bundle.js';
+import Framework7, { Dom7, Template7 } from 'framework7/dist/framework7.esm.bundle.js';
+
+// Map Module
+import Map from './modules/Map';
 
 // Dom7
 const $ = Dom7;
@@ -32,8 +32,9 @@ export default class {
       id: 'myapp',
       root: id,
       theme,
-      data: function () {
+      data: () => {
         return {
+          map: null,
           user: {
             firstName: 'John',
             lastName: 'Doe',
@@ -50,6 +51,11 @@ export default class {
         placementId: 'pltd4o7ibb9rc653x14',
       },
       on: {
+        pageInit: (page) => {
+          console.log('pageInit');
+          const {app: { data }} = page;
+          data.map = new Map('map');
+        },
         routerAjaxStart: (xhr, options) => {
           app.app.preloader.show();
         },
