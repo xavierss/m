@@ -5,3 +5,6 @@
 
 /* tabbar active color custom */
 .ios .color-theme-black .tabbar a.tab-link-active {color:rgba(61, 116, 226, 0.8);}
+
+/* WEB 임시 logo  */
+body > div:nth-child(4) > div {background: url('../img/logo.png')}

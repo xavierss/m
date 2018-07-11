@@ -56,6 +56,7 @@ export default class {
           const {app: { data }} = page;
           data.map = new Map('map');
         },
+        
         routerAjaxStart: (xhr, options) => {
           app.app.preloader.show();
         },
