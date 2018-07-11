@@ -12,7 +12,7 @@
   "dependencies": {
     "font-awesome": "^4.7.0",
     "framework7": "^2.3.1",
-    "ol": "^4.6.5",
+    "ol": "^5.0.2",
     "proj4": "^2.4.4",
     "vue": "^2.5.2"
   },
