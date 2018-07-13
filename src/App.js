@@ -6,7 +6,7 @@ import 'ol/ol.css';
 
 // Framework7 Styles
 import './assets/css/framework7.min.css';
-import './assets/css/app2.css';
+import './assets/css/app.css';
 import './assets/css/styles.css';
 
 // Framework7 Script
