@@ -6,11 +6,11 @@ import 'ol/ol.css';
 
 // Framework7 Styles
 import './assets/css/framework7.min.css';
-import './assets/css/app.css';
+import './assets/css/app2.css';
 import './assets/css/styles.css';
 
 // Framework7 Script
-import Framework7, { Dom7, Template7 } from 'framework7/dist/framework7.esm.bundle.js';
+import Framework7, { Dom7, Template7 } from 'framework7/framework7.esm.bundle.js';
 
 // Framework7 Routes 정보
 import routes from './routes';
@@ -19,7 +19,7 @@ import routes from './routes';
 import Map from './modules/Map';
 
 // Dom7
-const $ = Dom7;
+const $$ = Dom7;
 
 export default class {
   constructor(id) {

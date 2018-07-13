@@ -8,7 +8,7 @@ export default [
   // Map page
   {
     path: '/map/',
-    componentUrl: './static/pages/map.html'
+    componentUrl: './static/components/map.html'
   },
   // About page
   {
@@ -129,6 +129,10 @@ export default [
     componentUrl: './static/pages/dialog.html',
   },
   {
+    path: '/elevation/',
+    url: './static/pages/elevation.html',
+  },
+  {
     path: '/fab/',
     url: './static/pages/fab.html',
   },
@@ -139,6 +143,10 @@ export default [
   {
     path: '/form-storage/',
     url: './static/pages/form-storage.html',
+  },
+  {
+    path: '/gauge/',
+    componentUrl: './static/pages/gauge.html',
   },
   {
     path: '/grid/',
@@ -437,6 +445,10 @@ export default [
         url: './static/pages/toolbar-hide-scroll.html',
       },
     ],
+  },
+  {
+    path: '/tooltip/',
+    componentUrl: './static/pages/tooltip.html',
   },
   {
     path: '/timeline/',
