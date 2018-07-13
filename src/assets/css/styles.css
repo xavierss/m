@@ -4,7 +4,9 @@
 .h-100 {height: 100%;}
 
 /* tabbar active color custom */
-.ios .color-theme-black .tabbar a.tab-link-active {color:rgba(61, 116, 226, 0.8);}
+/* .ios .color-theme-black .tabbar a.tab-link-active {color:rgba(61, 116, 226, 0.8);} */
+/* .ios .color-theme-black .tabbar a.tab-link-active {color:rgba(255, 255, 255, 0.8);} */
+/* .ios .toolbar {background: #176686;} */
 
 /* WEB 임시 logo  */
 body > div:nth-child(4) > div {background: url('../img/logo.png')}

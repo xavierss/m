@@ -5,6 +5,11 @@ export default [
     url: './index.html',
     name: 'home',
   },
+  // Map page
+  {
+    path: '/map/',
+    componentUrl: './static/pages/map.html'
+  },
   // About page
   {
     path: '/about/',

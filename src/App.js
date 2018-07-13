@@ -5,13 +5,15 @@ import 'font-awesome/css/font-awesome.css'
 import 'ol/ol.css';
 
 // Framework7 Styles
-import 'framework7/dist/css/framework7.css';
+import './assets/css/framework7.min.css';
 import './assets/css/app.css';
 import './assets/css/styles.css';
 
 // Framework7 Script
-import routes from './routes';
 import Framework7, { Dom7, Template7 } from 'framework7/dist/framework7.esm.bundle.js';
+
+// Framework7 Routes 정보
+import routes from './routes';
 
 // Map Module
 import Map from './modules/Map';
@@ -32,37 +34,40 @@ export default class {
       id: 'myapp',
       root: id,
       theme,
-      data: () => {
+      data: function() {
         return {
-          map: null,
+          modules: {},
           user: {
             firstName: 'John',
             lastName: 'Doe',
           },
+          handler: {}
         };
       },
       methods: {
-        helloWorld: () => {
+        helloWorld: function() {
           app.dialog.alert('Hello World!');
         },
+
+        initMap: function() {
+          const {data} = this;
+          data.modules.map = new Map('map');
+        }
       },
       routes,
       vi: {
         placementId: 'pltd4o7ibb9rc653x14',
       },
       on: {
-        pageInit: (page) => {
-          console.log('pageInit');
-          const {app: { data }} = page;
-          data.map = new Map('map');
+        init: function() {
+          console.log('init');
+          this.methods.initMap.call(this);
         },
-        
-        routerAjaxStart: (xhr, options) => {
-          app.app.preloader.show();
+        routerAjaxStart: function(xhr, options) {
+          this.preloader.show();
         },
-
-        routerAjaxComplete: (xhr, options) => {
-          app.app.preloader.hide();
+        routerAjaxComplete: function(xhr, options) {
+          this.preloader.hide();
         }
       }
     });
